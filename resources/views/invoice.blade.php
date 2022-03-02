@@ -57,16 +57,16 @@
         <table id="firstTable" style="border: 1px solid black; margin-bottom: 100px; ">';
           <tr>
                 <td><h1 style="font-size: 30pt; margin-left: 15px !important; margin-right: 15px !important;">SIMULATION</h1></td>
+              <td><p style="text-align: left;font-size: 6pt; overflow-wrap: break-word; margin-right: 15px !important;">Szanowny Kliencie, <br>
+                      Prosimy o dokładne sprawdzenie załączonej makiety pod kątem błędów, takich jak treść projektu i umiejscowienie,
+                      kolory, pisownia i tak dalej. Wszelkie rozbieżności powinny być wyraźnie zaznaczone.
+                      Nasza firma nie odpowiada za błędy, które nie zostały zaznaczone na makiecie.
+                  </p></td>
                 <td><p style="text-align: left;font-size: 6pt; overflow-wrap: break-word; margin-right: 15px !important;">Dear Customer, <br>
                         Please check the attached mockup carefully for any errors such as design content and placement,
                         colours, spelling and so on. Any discrepancies should be clearly marked.
                         Our company is not responsible for mistakes that were not marked on the mockup.
                     </p></td>
-              <td><p style="font-size: 6pt; overflow-wrap: break-word; margin-right: 15px !important; text-align: left;">Lieber Kunde, <br>
-                      Bitte überprüfen Sie das beigefügte Mockup sorgfältig auf Fehler wie Designinhalt und Platzierung,
-                      Farben, Rechtschreibung und so weiter. Etwaige Abweichungen sind deutlich zu kennzeichnen.
-                      Unser Unternehmen ist nicht verantwortlich für Fehler, die nicht auf dem Mockup gekennzeichnet wurden.
-                  </p></td>
             </tr>
          </table>
 </div>

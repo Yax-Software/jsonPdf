@@ -6,8 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>VISUALISATION</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
-             .shirt
+        #notes {
+            position: fixed;
+            bottom: 10px !important;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+            margin:0px 5px 0px 5px !important;
+        }
+        #notes p {
+           font-size: 13pt;
+            word-break: break-all;
+            width: 800px !important;
+        }
+        .shirt
         {
             z-index: 3;
             transform: scale(0.8);
@@ -23,7 +34,10 @@
         }
         body, html {
             height: 100%;
-            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
         }
 
     </style>
@@ -57,5 +71,11 @@
     @if (@getimagesize($src3))
     <img class="shirt" src="{{$src3}}">
     @endif
+        @if($textPdf)
+            <div id="notes">
+                <p>{{$textPdf}}</p>
+            </div>
+        @endif
 </div>
 </body>
+

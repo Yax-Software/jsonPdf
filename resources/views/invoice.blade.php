@@ -7,11 +7,13 @@
         <title>VISUALISATION</title>
     <style>
         #notes {
-            position: fixed;
-            bottom: 10px !important;
             font-family: Arial, Helvetica, sans-serif;
             text-align: left;
-            margin:0px 5px 0px 5px !important;
+            margin:5px 5px 0px 5px !important;
+            z-index: 999 !important;
+            position: absolute;
+           left: 0 !important;
+            bottom: 10px !important;
         }
         #notes p {
            font-size: 13pt;
@@ -25,6 +27,7 @@
 
         }
         .bg {
+            position: relative;
             background-image: url("../test.png");
             width: 100%;
             height: 100%;
@@ -73,7 +76,10 @@
     @endif
         @if($textPdf)
             <div id="notes">
-                <p>{{$textPdf}}</p>
+                @php
+           $textPdfCut= str_replace('"', "",$textPdf);
+                @endphp
+                <p>{{$textPdfCut}}</p>
             </div>
         @endif
 </div>

@@ -8,17 +8,21 @@
     <style>
         #notes {
             font-family: Arial, Helvetica, sans-serif;
-            text-align: left;
-            margin:5px 5px 0px 5px !important;
             z-index: 999 !important;
             position: absolute;
-           left: 0 !important;
-            bottom: 10px !important;
+            bottom: 5px !important;
+            left: auto;
+            right: auto;
+            margin-left: 15px;
+            margin-right: 15px;
+            width: 700px;
         }
-        #notes p {
-           font-size: 13pt;
+        p {
+           font-size: 10pt;
             word-break: break-all;
-            width: 800px !important;
+            width: 100%;
+            margin-left: 30px;
+            text-align: left;
         }
         .shirt
         {
@@ -26,8 +30,19 @@
             transform: scale(0.8);
 
         }
+        .owsior
+        {
+            z-index: 3;
+            transform: scale(1.2);
+            transform-origin: top right;
+            position: absolute;
+            margin-top: 320px !important;
+            margin-left: 500px !important;
+            width: 500px;
+
+        }
         .bg {
-            position: relative;
+            position: absolute;
             background-image: url("../test.png");
             width: 100%;
             height: 100%;
@@ -37,10 +52,7 @@
         }
         body, html {
             height: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: auto;
-            margin-bottom: auto;
+            margin: auto;
         }
 
     </style>
@@ -61,8 +73,9 @@
 <body>
     @csrf
 <div class="bg" style="width: 100%;height: 100%;">
+    <div>
     @if (@getimagesize($src))
-    <img class="shirt" src="{{$src}}" style="margin-top: 320px !important;margin-right: 80px !important;margin-left: 55px !important">
+    <img class="{{ $flag ? 'owsior' : 'shirt' }}" src="{{$src}}" style="margin-top: 320px !important;margin-right: 80px !important;margin-left: 55px !important">
     @endif
     @if (@getimagesize($src1))
     <img class="shirt" src="{{$src1}}">

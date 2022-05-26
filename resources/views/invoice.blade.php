@@ -7,39 +7,35 @@
         <title>VISUALISATION</title>
     <style>
         #notes {
-            font-family: Arial, Helvetica, sans-serif;
-            z-index: 999 !important;
-            position: absolute;
-            bottom: 5px !important;
-            left: auto;
-            right: auto;
-            margin-left: 15px;
-            margin-right: 15px;
-            width: 700px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
         }
         p {
            font-size: 10pt;
             word-break: break-all;
-            width: 100%;
             margin-left: 30px;
+            margin-right: 30px;
             text-align: left;
         }
         .shirt
         {
             z-index: 3;
             transform: scale(0.8);
-
-        }
-        .owsior
+                   }
+        .soloShirt
         {
-            z-index: 3;
-            transform: scale(1.2);
-            transform-origin: top right;
-            position: absolute;
-            margin-top: 320px !important;
-            margin-left: 500px !important;
-            width: 500px;
-
+            z-index: 999 !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  /* Centering y-axis */
+            align-items :center; /* Centering x-axis */
+            width: 700px;
+            transform: scale(0.7);
+            margin-top: -10%;
+            margin-left: 5%;
         }
         .bg {
             position: absolute;
@@ -73,9 +69,11 @@
 <body>
     @csrf
 <div class="bg" style="width: 100%;height: 100%;">
-    <div>
     @if (@getimagesize($src))
-    <img class="{{ $flag ? 'owsior' : 'shirt' }}" src="{{$src}}" style="margin-top: 320px !important;margin-right: 80px !important;margin-left: 55px !important">
+        <div style="margin-top: 260px !important;">
+    <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src}}" style="
+            margin-right: 80px !important;
+            margin-left: 55px !important">
     @endif
     @if (@getimagesize($src1))
     <img class="shirt" src="{{$src1}}">
@@ -95,6 +93,6 @@
                 <p>{{$textPdfCut}}</p>
             </div>
         @endif
-</div>
+    </div>
 </body>
 

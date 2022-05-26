@@ -17,7 +17,13 @@ class UrlController extends Controller
         $pdf = PDF::loadView('invoice', ["src" => $request->src, "src1" => $request->src1, "src2" => $request->src2, "src3" => $request->src3,"colors" => $request->colors, "textPdf" => $request->textPdf, 'flag' => $flag]);
         $random = Str::random(12);
         Storage::put('public/pdf/invoice'.$random.'.pdf', $pdf->output());
-        $url = Storage::url('public/pdf/invoice'.$random.'.pdf');
+        if($_SERVER["HTTP_HOST"] == "127.0.0.1:8001")
+        {
+            $url = Storage::url('public/pdf/invoice' . $random . '.pdf');
+        }else
+        {
+            $url = ('/jsonPdf/public/storage/pdf/invoice'.$random.'.pdf');
+        }
         return response()->json(
             ['src' => $hostUrl.$url]);
     }

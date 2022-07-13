@@ -11,6 +11,7 @@
             left: 0;
             bottom: 0;
             width: 100%;
+            max-height: 200px;
             text-align: center;
         }
         p {
@@ -19,6 +20,7 @@
             margin-left: 30px;
             margin-right: 30px;
             text-align: left;
+            margin-bottom: 50px !important;
         }
         .shirt
         {
@@ -32,10 +34,10 @@
             flex-direction: column;
             justify-content: center;  /* Centering y-axis */
             align-items :center; /* Centering x-axis */
-            width: 700px;
-            transform: scale(0.7);
-            margin-top: -10%;
-            margin-left: 5%;
+            /*transform: scale(1.3);*/
+            /*margin-top: -10%;*/
+            width: 40% !important;
+            padding-left: 20% !important;
         }
         .bg {
             position: absolute;

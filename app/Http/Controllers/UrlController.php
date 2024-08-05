@@ -14,7 +14,9 @@ class UrlController extends Controller
         $flag = true;
         if (@getimagesize($request->src1 )|| @getimagesize($request->src2 )|| @getimagesize($request->src3)) $flag = false;
 
-        $pdf = PDF::loadView('invoice', ["src" => $request->src, "src1" => $request->src1, "src2" => $request->src2, "src3" => $request->src3,"colors" => $request->colors, "textPdf" => $request->textPdf, 'flag' => $flag]);
+        $pdf = PDF::loadView('invoice', ["src" => $request->src, "src1" => $request->src1, "src2" => $request->src2, "src3" => $request->src3,"colors" => $request->colors, "textPdf" => $request->textPdf, 'flag' => $flag], [], [
+            'mode' => 'utf-8'
+        ]);
         $random = Str::random(12);
         Storage::put('public/pdf/'.$random.'.pdf', $pdf->output());
         if($_SERVER["HTTP_HOST"] == "127.0.0.1:8001")

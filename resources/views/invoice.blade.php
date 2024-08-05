@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>VISUALISATION</title>
     <style>
+        body { font-family: "DejaVu Sans", sans-serif; }
         #notes {
             position: fixed;
             left: 0;

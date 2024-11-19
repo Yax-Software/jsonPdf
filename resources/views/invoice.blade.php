@@ -12,7 +12,7 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            max-height: 200px;
+            max-height: 300px;
             text-align: center;
         }
         p {

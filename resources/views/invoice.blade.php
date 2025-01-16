@@ -10,10 +10,11 @@
         #notes {
             position: fixed;
             left: 0;
-            bottom: 0;
+            bottom: -10px;
             width: 100%;
             max-height: 250px;
             text-align: center;
+            font-size: 9pt;
         }
         p {
            font-size: 10pt;

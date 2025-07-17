@@ -16,7 +16,7 @@ class UrlController extends Controller
 
         $pdf = PDF::loadView('invoice', ["src" => $request->src, "src1" => $request->src1, "src2" => $request->src2, "src3" => $request->src3,"colors" => $request->colors, "textPdf" => $request->textPdf, 'flag' => $flag]);
         $random = Str::random(12);
-        $random = 'lynka-visualisation'.(isset($request->productName)?'-'.strtolower($request->productName):'').'-'.$random;
+        $random = 'lynka-visualisation'.(isset($request->productName)?'-'.(Str::of($request->productName)->slug('-')):'').'-'.$random;
         Storage::put('public/pdf/'.$random.'.pdf', $pdf->output());
         if($_SERVER["HTTP_HOST"] == "127.0.0.1:8001")
         {

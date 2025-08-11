@@ -27,8 +27,9 @@
         .shirt
         {
             z-index: 3;
-            transform: scale(1.2);
-                   }
+            transform: scale(1);
+            width: 600px;
+        }
         .soloShirt
         {
             z-index: 999 !important;

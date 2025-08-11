@@ -39,7 +39,7 @@
             align-items :center; /* Centering x-axis */
             /*transform: scale(1.3);*/
             /*margin-top: -10%;*/
-            width: 40% !important;
+            width: 600px !important;
             padding-left: 20% !important;
         }
         .bg {

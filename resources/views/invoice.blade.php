@@ -39,8 +39,8 @@
             align-items :center; /* Centering x-axis */
             /*transform: scale(1.3);*/
             /*margin-top: -10%;*/
-            width: 600px !important;
-            padding-left: 20% !important;
+            width: 80% !important;
+            margin: 0 10% 0 !important;
         }
         .bg {
             position: absolute;

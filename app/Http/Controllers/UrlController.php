@@ -11,6 +11,12 @@ class UrlController extends Controller
     public function jsonData(Request $request)
     {
         $hostUrl = $request->getSchemeAndHttpHost();
+
+        $request->src = Str::replace('-big', '-medium', $request->src);
+        $request->src1 = Str::replace('-big', '-medium', $request->src1);
+        $request->src2 = Str::replace('-big', '-medium', $request->src2);
+        $request->src3 = Str::replace('-big', '-medium', $request->src3);
+
         $flag = true;
         if (@getimagesize($request->src1 )|| @getimagesize($request->src2 )|| @getimagesize($request->src3)) $flag = false;
 

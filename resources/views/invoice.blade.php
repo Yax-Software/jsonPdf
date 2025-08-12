@@ -4,7 +4,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>MARKETING VISUALISATION</title>
+    <title>MARKETING VISUALISATION</title>
     <style>
         body { font-family: "DejaVu Sans", sans-serif; }
         #notes {
@@ -17,7 +17,7 @@
             font-size: 9pt;
         }
         p {
-           font-size: 10pt;
+            font-size: 10pt;
             word-break: break-all;
             margin-left: 30px;
             margin-right: 30px;
@@ -27,8 +27,7 @@
         .shirt
         {
             z-index: 3;
-            transform: scale(1);
-            width: 600px;
+            transform: scale(0.8);
         }
         .soloShirt
         {
@@ -39,8 +38,8 @@
             align-items :center; /* Centering x-axis */
             /*transform: scale(1.3);*/
             /*margin-top: -10%;*/
-            width: 80% !important;
-            margin: 0 10% 0 !important;
+            width: 40% !important;
+            padding-left: 20% !important;
         }
         .bg {
             position: absolute;
@@ -70,34 +69,34 @@
             console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
         }
     </script>
- </head>
+</head>
 <body>
-    @csrf
+@csrf
 <div class="bg" style="width: 100%;height: 100%;">
     @if (@getimagesize($src))
         <div style="margin-top: 260px !important;">
-    <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src}}" style="
+            <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src}}" style="
             margin-right: 80px !important;
             margin-left: 55px !important">
-    @endif
-    @if (@getimagesize($src1))
-    <img class="shirt" src="{{$src1}}">
-    @endif
-    <br>
-    @if (@getimagesize($src2))
-    <img class="shirt" src="{{$src2}}" style="margin-right: 80px !important; margin-left: 55px !important">
-    @endif
-    @if (@getimagesize($src3))
-    <img class="shirt" src="{{$src3}}">
-    @endif
-        @if($textPdf)
-            <div id="notes">
-                @php
-           $textPdfCut= str_replace('"', "",$textPdf);
-                @endphp
-                <p>{{$textPdfCut}}</p>
-            </div>
-        @endif
-    </div>
+            @endif
+            @if (@getimagesize($src1))
+                <img class="shirt" src="{{$src1}}">
+            @endif
+            <br>
+            @if (@getimagesize($src2))
+                <img class="shirt" src="{{$src2}}" style="margin-right: 80px !important; margin-left: 55px !important">
+            @endif
+            @if (@getimagesize($src3))
+                <img class="shirt" src="{{$src3}}">
+            @endif
+            @if($textPdf)
+                <div id="notes">
+                    @php
+                        $textPdfCut= str_replace('"', "",$textPdf);
+                    @endphp
+                    <p>{{$textPdfCut}}</p>
+                </div>
+            @endif
+        </div>
 </body>
 

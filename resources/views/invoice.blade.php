@@ -28,6 +28,7 @@
         {
             z-index: 3;
             transform: scale(1);
+            width: 50%;
         }
         .soloShirt
         {
@@ -38,7 +39,8 @@
             align-items :center; /* Centering x-axis */
             /*transform: scale(1.3);*/
             /*margin-top: -10%;*/
-            width: 80% !important;
+            width: auto !important;
+            max-height: 600px !important;
             padding-left: 10% !important;
         }
         .bg {

@@ -13,7 +13,16 @@ class UrlController extends Controller
         $hostUrl = $request->getSchemeAndHttpHost();
 
         $flag = true;
-        if (@getimagesize($request->src1 )|| @getimagesize($request->src2 )|| @getimagesize($request->src3)) $flag = false;
+
+        $correctImages = 0;
+        if (@getimagesize($request->src)) $correctImages++;
+        if (@getimagesize($request->src1)) $correctImages++;
+        if (@getimagesize($request->src2)) $correctImages++;
+        if (@getimagesize($request->src3)) $correctImages++;
+
+        if ($correctImages > 1) {
+            $flag = false;
+        }
 
         if (!$flag) {
             $request->src = Str::replace('-big', '-medium', $request->src);

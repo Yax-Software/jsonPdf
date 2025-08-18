@@ -75,18 +75,19 @@
 <div class="bg" style="width: 100%;height: 100%;">
         <div style="margin-top: 260px !important;">
             @if (@getimagesize($src))
-            <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src}}">
+                <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src}}">
             @endif
             @if (@getimagesize($src1))
-                <img class="shirt" src="{{$src1}}">
+                <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src1}}">
             @endif
             <br>
             @if (@getimagesize($src2))
-                <img class="shirt" src="{{$src2}}" style="margin-right: 80px !important; margin-left: 55px !important">
+                <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src2}}" style="margin-right: 80px !important; margin-left: 55px !important">
             @endif
             @if (@getimagesize($src3))
-                <img class="shirt" src="{{$src3}}">
+                <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src3}}">
             @endif
+
             @if($textPdf)
                 <div id="notes">
                     @php

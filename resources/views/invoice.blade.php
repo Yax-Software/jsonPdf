@@ -80,9 +80,8 @@
             @if (@getimagesize($src1))
                 <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src1}}">
             @endif
-            <br>
             @if (@getimagesize($src2))
-                <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src2}}" style="margin-right: 80px !important; margin-left: 55px !important">
+                <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src2}}">
             @endif
             @if (@getimagesize($src3))
                 <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src3}}">

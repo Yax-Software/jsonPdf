@@ -38,8 +38,8 @@
             align-items :center; /* Centering x-axis */
             /*transform: scale(1.3);*/
             /*margin-top: -10%;*/
-            width: 40% !important;
-            padding-left: 20% !important;
+            width: 80% !important;
+            padding-left: 10% !important;
         }
         .bg {
             position: absolute;
@@ -75,9 +75,7 @@
 <div class="bg" style="width: 100%;height: 100%;">
     @if (@getimagesize($src))
         <div style="margin-top: 260px !important;">
-            <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src}}" style="
-            margin-right: 80px !important;
-            margin-left: 55px !important">
+            <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src}}">
             @endif
             @if (@getimagesize($src1))
                 <img class="shirt" src="{{$src1}}">

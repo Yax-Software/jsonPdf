@@ -25,10 +25,10 @@ class UrlController extends Controller
         }
 
         if (!$flag) {
-            $request->src = Str::replace('-big', '-medium', $request->src);
-            $request->src1 = Str::replace('-big', '-medium', $request->src1);
-            $request->src2 = Str::replace('-big', '-medium', $request->src2);
-            $request->src3 = Str::replace('-big', '-medium', $request->src3);
+//            $request->src = Str::replace('-big', '-medium', $request->src);
+//            $request->src1 = Str::replace('-big', '-medium', $request->src1);
+//            $request->src2 = Str::replace('-big', '-medium', $request->src2);
+//            $request->src3 = Str::replace('-big', '-medium', $request->src3);
         }
 
         $pdf = PDF::loadView('invoice', ["src" => $request->src, "src1" => $request->src1, "src2" => $request->src2, "src3" => $request->src3,"colors" => $request->colors, "textPdf" => $request->textPdf, 'flag' => $flag]);

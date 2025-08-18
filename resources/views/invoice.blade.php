@@ -73,8 +73,8 @@
 <body>
 @csrf
 <div class="bg" style="width: 100%;height: 100%;">
-    @if (@getimagesize($src))
         <div style="margin-top: 260px !important;">
+            @if (@getimagesize($src))
             <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src}}">
             @endif
             @if (@getimagesize($src1))

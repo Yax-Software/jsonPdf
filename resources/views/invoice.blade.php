@@ -43,7 +43,7 @@
             height: auto;
         }
         .images-container {
-            padding-top: 50px;
+            padding-top: 10px;
             display: flex;
             flex-direction: column;
             justify-content: center;  /* Centering y-axis */

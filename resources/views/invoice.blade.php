@@ -33,15 +33,18 @@
         .soloShirt
         {
             z-index: 999 !important;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;  /* Centering y-axis */
-            align-items :center; /* Centering x-axis */
+
             /*transform: scale(1.3);*/
             /*margin-top: -10%;*/
             width: auto !important;
             max-height: 600px !important;
             padding-left: 15% !important;
+        }
+        .images-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  /* Centering y-axis */
+            align-items :center; /* Centering x-axis */
         }
         .bg {
             position: absolute;
@@ -76,6 +79,7 @@
 @csrf
 <div class="bg" style="width: 100%;height: 100%;">
         <div style="margin-top: 260px !important; margin-left: 5% !important;">
+            <div class="images-container">
             @if (@getimagesize($src))
                 <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src}}">
             @endif
@@ -88,6 +92,7 @@
             @if (@getimagesize($src3))
                 <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src3}}">
             @endif
+            </div>
 
             @if($textPdf)
                 <div id="notes">

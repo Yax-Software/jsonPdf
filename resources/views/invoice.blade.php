@@ -29,7 +29,7 @@
             z-index: 3;
             transform: scale(1);
             width: 45%;
-            margin-top: -80px;
+            margin-top: -100px;
         }
         .soloShirt
         {
@@ -43,7 +43,7 @@
             margin-top: -80px;
         }
         .images-container {
-            margin-top: 80px;
+            margin-top: 120px;
             display: flex;
             flex-direction: column;
             justify-content: center;  /* Centering y-axis */

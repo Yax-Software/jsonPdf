@@ -75,7 +75,7 @@
 <body>
 @csrf
 <div class="bg" style="width: 100%;height: 100%;">
-        <div style="margin-top: 260px !important; margin-left: 10% !important;">
+        <div style="margin-top: 260px !important; margin-left: 5% !important;">
             @if (@getimagesize($src))
                 <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src}}">
             @endif

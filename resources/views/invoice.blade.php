@@ -41,7 +41,7 @@
             /*margin-top: -10%;*/
             width: auto !important;
             max-height: 600px !important;
-            padding-left: 10% !important;
+            padding-left: 15% !important;
         }
         .bg {
             position: absolute;
@@ -75,7 +75,7 @@
 <body>
 @csrf
 <div class="bg" style="width: 100%;height: 100%;">
-        <div style="margin-top: 260px !important;">
+        <div style="margin-top: 260px !important; margin-left: 10% !important;">
             @if (@getimagesize($src))
                 <img class="{{ $flag ? 'soloShirt' : 'shirt' }}" src="{{$src}}">
             @endif

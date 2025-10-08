@@ -29,6 +29,7 @@
             z-index: 3;
             transform: scale(1);
             width: 45%;
+            float: left;
         }
         .soloShirt
         {
@@ -41,10 +42,7 @@
             padding-left: 15% !important;
         }
         .images-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;  /* Centering y-axis */
-            align-items :center; /* Centering x-axis */
+            display: block;
         }
         .bg {
             position: absolute;

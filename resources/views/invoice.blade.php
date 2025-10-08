@@ -44,7 +44,7 @@
         }
         .images-container {
             margin-top: 150px;
-            padding-top: 20px;
+            padding-top: 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;  /* Centering y-axis */

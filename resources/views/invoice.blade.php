@@ -28,7 +28,7 @@
         {
             z-index: 3;
             transform: scale(1);
-            width: 40%;
+            width: 43%;
         }
         .soloShirt
         {

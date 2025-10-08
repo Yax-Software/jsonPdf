@@ -30,10 +30,12 @@
             transform: scale(1);
             width: 45%;
             height: auto;
+            margin-top: -10px;
         }
         .soloShirt
         {
             z-index: 999 !important;
+            margin-top: -10px;
 
             /*transform: scale(1.3);*/
             /*margin-top: -10%;*/
@@ -43,6 +45,7 @@
             height: auto;
         }
         .images-container {
+            margin-top: 10px;
             padding-top: 10px;
             display: flex;
             flex-direction: column;

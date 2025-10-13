@@ -24,34 +24,35 @@
             text-align: left;
             margin-bottom: 50px !important;
         }
-        .shirt
-        {
-            z-index: 3;
-            transform: scale(1);
-            max-width: 45%;
-            height: auto;
-            margin-top: -10px;
-            max-height: 400px;
-        }
-        .soloShirt
-        {
-            z-index: 999 !important;
-            margin-top: -10px;
-
-            /*transform: scale(1.3);*/
-            /*margin-top: -10%;*/
-            width: auto !important;
-            max-height: 600px !important;
-            padding-left: 15% !important;
-            height: auto;
-        }
         .images-container {
             margin-top: 10px;
             padding-top: 0;
             display: flex;
-            flex-direction: column;
-            justify-content: center;  /* Centering y-axis */
-            align-items :center; /* Centering x-axis */
+            flex-wrap: wrap; /* Allow wrapping to create rows */
+            justify-content: center;
+            align-items: flex-start; /* Align items to top of each row */
+            gap: 2%; /* Space between images */
+        }
+
+        .shirt {
+            z-index: 3;
+            width: 45%;
+            max-width: 45%;
+            height: auto;
+            max-height: 400px; /* Set your desired max height */
+            object-fit: contain; /* Maintain aspect ratio within constraints */
+            margin-top: -10px;
+        }
+
+        .soloShirt {
+            z-index: 999 !important;
+            margin-top: -10px;
+            width: auto !important;
+            max-width: 70% !important; /* Limit width for solo images */
+            max-height: 600px !important;
+            object-fit: contain;
+            padding-left: 15% !important;
+            height: auto;
         }
         .bg {
             position: absolute;

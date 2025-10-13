@@ -28,19 +28,19 @@
             margin-top: 10px;
             padding-top: 0;
             display: flex;
-            flex-wrap: wrap; /* Allow wrapping to create rows */
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: flex-start; /* Align items to top of each row */
-            gap: 2%; /* Space between images */
+            align-items: flex-start;
+            gap: 2%;
         }
 
         .shirt {
             z-index: 3;
-            width: 45%;
-            max-width: 45%;
+            width: auto; /* Let width adjust automatically */
+            max-width: 45%; /* Maximum width constraint */
             height: auto;
             max-height: 400px; /* Set your desired max height */
-            object-fit: contain; /* Maintain aspect ratio within constraints */
+            object-fit: contain;
             margin-top: -10px;
         }
 
@@ -48,7 +48,7 @@
             z-index: 999 !important;
             margin-top: -10px;
             width: auto !important;
-            max-width: 70% !important; /* Limit width for solo images */
+            max-width: 70% !important;
             max-height: 600px !important;
             object-fit: contain;
             padding-left: 15% !important;

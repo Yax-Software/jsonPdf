@@ -31,6 +31,7 @@
             width: 45%;
             height: auto;
             margin-top: -10px;
+            max-height: 200px;
         }
         .soloShirt
         {

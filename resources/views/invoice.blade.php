@@ -28,10 +28,10 @@
         {
             z-index: 3;
             transform: scale(1);
-            width: 45%;
+            max-width: 45%;
             height: auto;
             margin-top: -10px;
-            /*max-height: 400px;*/
+            max-height: 400px;
         }
         .soloShirt
         {
